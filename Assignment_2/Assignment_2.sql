@@ -8,7 +8,6 @@ CREATE TABLE department(
     department_name VARCHAR(50) NOT NULL
 );
 
-
 CREATE TABLE `position`(
 	position_id INT PRIMARY KEY AUTO_INCREMENT,
     position_name ENUM('Dev', 'Test','Scrum Master', 'PM')
@@ -91,7 +90,6 @@ CREATE TABLE exam_question(
 	FOREIGN KEY (exam_id) REFERENCES  exam(exam_id) , 
     FOREIGN KEY (question_id) REFERENCES question(question_id)
 );
-
 
 
 
