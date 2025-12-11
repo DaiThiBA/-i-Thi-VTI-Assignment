@@ -61,7 +61,7 @@ BEGIN
     FROM type_question t
     LEFT JOIN question q 
            ON q.type_id = t.type_id
-          AND MONTH(q.create_date) = MONTH(CCURDATE())
+          AND MONTH(q.create_date) = MONTH(CURDATE())
           AND YEAR(q.create_date)  = YEAR(CURDATE())
     GROUP BY t.type_id, t.type_name;
 END $$
